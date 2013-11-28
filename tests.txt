@@ -1,17 +1,17 @@
 1) Web interface valid HTML
 Expected Result:	Yes
-Actual Result:		
-Pass:				
+Actual Result:		Yes
+Pass:				Yes
 
 2) Web interface valid CSS
 Expected Result:	Yes
-Actual Result:		
-Pass:				
+Actual Result:		Yes
+Pass:				Yes
 
 3) Ability to select convert to Base 10 or Roman
 Expected Result:	Yes
-Actual Result:		
-Pass:				
+Actual Result:		Yes
+Pass:				Yes
 
 4) Enter space, comma and decimal in Base 10
 Expected Result:	Strips Out

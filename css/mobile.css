@@ -1,0 +1,16 @@
+@media only screen and (max-device-width: 959px) {
+	#content {
+		width:99%;
+		padding:1%;
+		max-width:640px;
+		min-width:480px;
+	}
+}
+@media only screen and (max-device-width: 639px) {
+	#content {
+		width:99%;
+		padding:1%;
+		max-width:480px;
+		min-width:320px;
+	}
+}
