@@ -1,0 +1,54 @@
+1) Web interface valid HTML
+Expected Result:	Yes
+Actual Result:		
+Pass:				
+
+2) Web interface valid CSS
+Expected Result:	Yes
+Actual Result:		
+Pass:				
+
+3) Ability to select convert to Base 10 or Roman
+Expected Result:	Yes
+Actual Result:		
+Pass:				
+
+4) Enter space, comma and decimal in Base 10
+Expected Result:	Strips Out
+Actual Result:		
+Pass:				
+
+5) Enter none numeric characters, excluding space, full stop and comma in Base 10
+Expected Result:	Error Message
+Actual Result:		
+Pass:				
+
+6) Enter characters excluding I,V,X,L,C,D,M in Roman Numerals
+Expected Result:	Error Message
+Actual Result:		
+Pass:				
+
+7) Enter 4 of the same characters in a row in Roman Numerals
+Expected Result:	Error Message
+Actual Result:		
+Pass:				
+
+8) Enter a value less then 1 or greater then 3999
+Expected Result:	Error Message
+Actual Result:		
+Pass:				
+
+9) Enter a Roman characters out of sequence, largest to smallest, excluding subtraction pairs
+Expected Result:	Error Message
+Actual Result:		
+Pass:				
+
+10) Supply 10 Base 10 to Roman results
+Expected Result:	
+Actual Result:		
+Pass:				
+
+10) Supply 10 Roman to Base 10 results
+Expected Result:	
+Actual Result:		
+Pass:				
