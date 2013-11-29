@@ -15,40 +15,56 @@ Pass:				Yes
 
 4) Enter space, comma and decimal in Base 10
 Expected Result:	Strips Out
-Actual Result:		
-Pass:				
+Actual Result:		Strips Out
+Pass:				Yes
 
 5) Enter none numeric characters, excluding space, full stop and comma in Base 10
 Expected Result:	Error Message
-Actual Result:		
-Pass:				
+Actual Result:		Error Message
+Pass:				Yes
 
 6) Enter characters excluding I,V,X,L,C,D,M in Roman Numerals
 Expected Result:	Error Message
-Actual Result:		
-Pass:				
+Actual Result:		Error Message
+Pass:				Yes
 
 7) Enter 4 of the same characters in a row in Roman Numerals
 Expected Result:	Error Message
-Actual Result:		
-Pass:				
+Actual Result:		Error Message
+Pass:				Yes
 
 8) Enter a value less then 1 or greater then 3999
 Expected Result:	Error Message
-Actual Result:		
-Pass:				
+Actual Result:		Error Message
+Pass:				Yes
 
 9) Enter a Roman characters out of sequence, largest to smallest, excluding subtraction pairs
 Expected Result:	Error Message
-Actual Result:		
-Pass:				
+Actual Result:		Error Message
+Pass:				Yes
 
 10) Supply 10 Base 10 to Roman results
-Expected Result:	
-Actual Result:		
-Pass:				
+1002				MII
+2003				MMIII
+1999				MCMXCIX
+3202				MMMCCII
+38					XXXVIII
+1223				MCCXXIII
+90					XC
+569					DLXIX
+88					LXXXVIII
+999					CMXCIX
+Pass:				Yes
 
 10) Supply 10 Roman to Base 10 results
-Expected Result:	
-Actual Result:		
-Pass:				
+MII					1002
+MMIII				2003
+MCMXCIX				1999
+MMMCCII				3202
+XXXVIII				38
+MCCXXIII			1223	
+XC					90
+DLXIX				569
+LXXXVIII			88
+CMXCIX				999
+Pass:				Yes
