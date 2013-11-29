@@ -1,6 +1,6 @@
 <?php
 	$response = array();
-	$response['status'] = 'Error';
+	$response['status'] = false;
 	$response["message"]="An unknown error occured";
 	
 	if (isset($_REQUEST["strtype"])) {
@@ -24,11 +24,13 @@
 	
 	if ($strtype=="numeric") {
 		$converter->generate($strvalue);
-		$response["message"]=$converter->roman;
+		$response["message"]=$converter->message;
+		if ($converter->status) $response["message"]=$converter->roman;
 	}
 	elseif ($strtype=="roman") {
 		$converter->parse($strvalue);
-		$response["message"]=$converter->numeric;
+		$response["message"]=$converter->message;
+		if ($converter->status) $response["message"]=$converter->numeric;
 	}
 	
 	$response["status"]=$converter->status;
