@@ -8,7 +8,7 @@ class converter implements iRomanNumeralGenerator {
 	private $roman="";
 	private $numeric=0;
 	private $status=false;
-	private $message='';
+	private $message="";
 	private $minvalue=1;
 	private $maxvalue=3999;
 	private $romanNumerals = array('I'=>1,'V'=>'5','X'=>'10','L'=>50,'C'=>100,'D'=>500,'M'=>1000);
@@ -16,13 +16,13 @@ class converter implements iRomanNumeralGenerator {
 	
 	public function generate($data) {
 		if(preg_match('/[^0-9\.,\s]/', $data)) {
-			$this->message="You have entered an invalid numeric character.";
+			throw new Exception("You have entered an invalid numeric character.");
 		}
 		else {
 			$data=preg_replace("/[,\s]/","",$data);
 			$data=intval($data);
 			if ($data<$this->minvalue || $data>$this->maxvalue) {
-				$this->message="The number you have entered is out of range.";
+				throw new Exception("The number you have entered is out of range.");
 			}
 			else {
 				$allRomanNumerals = array_merge($this->romanNumerals, $this->subtractivePairs);
@@ -45,6 +45,9 @@ class converter implements iRomanNumeralGenerator {
 		$data=strtoupper($data);
 		if($this->check_and_calculate_roman($data)) {
 			$this->status=true;
+		}
+		else {
+			throw new Exception($this->message);
 		}
 	}
 	
