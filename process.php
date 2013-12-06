@@ -23,17 +23,27 @@
 	$converter=new converter();
 	
 	if ($strtype=="numeric") {
-		$converter->generate($strvalue);
-		$response["message"]=$converter->message;
-		if ($converter->status) $response["message"]=$converter->roman;
+		try {
+			$converter->generate($strvalue);
+			$response["message"]=$converter->get_data('message');
+			if ($converter->get_data('status')) $response["message"]=$converter->get_data('roman');
+		}
+		catch (Exception $e) {
+			$response["message"]=$e->getMessage();
+		}
 	}
 	elseif ($strtype=="roman") {
-		$converter->parse($strvalue);
-		$response["message"]=$converter->message;
-		if ($converter->status) $response["message"]=$converter->numeric;
+		try {
+			$converter->parse($strvalue);
+			$response["message"]=$converter->get_data('message');
+			if ($converter->get_data('status')) $response["message"]=$converter->get_data('numeric');
+		}
+		catch (Exception $e) {
+			$response["message"]=$e->getMessage();
+		}
 	}
 	
-	$response["status"]=$converter->status;
+	$response["status"]=$converter->get_data('status');
 	
 	echo json_encode($response);
 ?>

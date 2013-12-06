@@ -5,13 +5,12 @@ interface iRomanNumeralGenerator {
 }
 
 class converter implements iRomanNumeralGenerator {
-	public $roman="";
-	public $numeric=0;
-	public $status=false;
-	public $message='';
-	public $minvalue=1;
-	public $maxvalue=3999;
-	
+	private $roman="";
+	private $numeric=0;
+	private $status=false;
+	private $message='';
+	private $minvalue=1;
+	private $maxvalue=3999;
 	private $romanNumerals = array('I'=>1,'V'=>'5','X'=>'10','L'=>50,'C'=>100,'D'=>500,'M'=>1000);
 	private $subtractivePairs = array('IV'=>4,'IX'=>'9','XL'=>'40','XC'=>90,'CD'=>400,'CM'=>900);
 	
@@ -101,6 +100,10 @@ class converter implements iRomanNumeralGenerator {
 			$this->numeric=$totalval;
 		}
 		return $valid;
+	}
+	
+	public function get_data($key) {
+		return $this->$key;
 	}
 }
 ?>
